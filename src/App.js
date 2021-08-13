@@ -15,8 +15,9 @@ const App = () => {
       
       <Switch>
         <Route path='/' exact render={() => <h2>Choose Markets or Exchanges</h2>}/>
-        <Route path='/markets/:baseId' exact component={ItemDetailed}/>
+        {/* <Route path='/markets/:rank' component={ItemDetailed}/> */}
         <Route path='/markets' component={Markets}/>
+        <Route path='/exchanges/:exchangeId' component={ItemDetailed}/>
         <Route path='/exchanges' component={Exchanges}/>
       </Switch>
     </AppStyled>

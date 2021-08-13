@@ -5,6 +5,14 @@ export const MarketItemStyled = styled.div`
     display: flex;
     justify-content: space-between;
     cursor: pointer;
+    p {
+        width: 20%;
+        text-align: left;
+    }
+    &:hover {
+        background-color: #ececec;
+        transition: all 0.3s;
+    }
 `;
 
 export const ExchangesItemStyled = styled.div`
@@ -12,4 +20,12 @@ export const ExchangesItemStyled = styled.div`
     display: flex;
     justify-content: space-between;
     cursor: pointer;
+    p {
+        width: 20%;
+        text-align: left;
+    }
+    &:hover {
+        background-color: #ececec;
+        transition: all 0.3s;
+    }
 `;

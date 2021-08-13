@@ -6,17 +6,17 @@ import {MarketItemStyled, ExchangesItemStyled} from './Item.styles';;
 const Item = ({item, type, history}) => {
     if(type === 'markets') {
         return (
-                <MarketItemStyled onClick={() => history.push('/markets/' + item.baseId)}>
-                    <p>Rank: {item.rank}</p>
-                    <p>ID: {item.baseId}</p>
-                    <p>Symbol: {item.baseSymbol}</p>
-                    <p>Exchange ID: {item.exchangeId}</p>
-                    <p>Price: {item.priceUsd}</p>
+                <MarketItemStyled onClick={() => history.push('/markets/' + item.exchangeId)}>
+                    <p>{item.rank}</p>
+                    <p>{item.baseId}</p>
+                    <p>{item.baseSymbol}</p>
+                    <p>{item.exchangeId}</p>
+                    <p>{item.priceUsd}</p>
                 </MarketItemStyled>
         )
     } else if(type === 'exchanges') {
         return (
-            <ExchangesItemStyled>
+            <ExchangesItemStyled onClick={() => history.push('/exchanges/' + item.exchangeId)}>
                 <p>{item.rank}</p>
                 <p>{item.name}</p>
                 <p>{item.tradingPairs}</p>

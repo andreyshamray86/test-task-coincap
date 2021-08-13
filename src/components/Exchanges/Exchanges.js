@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import axios from 'axios';
 
 import ItemsList from '../ItemsList/ItemsList'
+import { ExchangeHeaderStyled } from './Exchages.styles';
 
 const Exchanges = () => {
     const [items, setItems] = useState([]);
@@ -20,10 +21,15 @@ const Exchanges = () => {
         .catch(err => console.log(err));
     }, []);
 
-    // console.log(items);
 
     return (
         <div>
+            <ExchangeHeaderStyled>
+                <p>Rank</p>
+                <p>ID</p>
+                <p>Symbol</p>
+                <p>Exchange</p>
+            </ExchangeHeaderStyled>
             <ItemsList items={items} type={'exchanges'}/>
         </div>
     )
