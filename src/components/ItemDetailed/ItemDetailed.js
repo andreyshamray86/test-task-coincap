@@ -19,9 +19,6 @@ const ItemDetailed = ({match}) => {
         }
     }, [match.params]);
 
-    
-
-    console.log(detailedItem);
     const procent = (+detailedItem.percentTotalVolume).toFixed(2);
     const volume = ((+detailedItem.volumeUsd)/1000000000).toFixed(1);
   
